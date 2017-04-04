@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Maickon_LogProduct>
+            <version>0.0.1</version>
+        </Maickon_LogProduct>
+    </modules>
+    <global>
+        <models>
+            <maickon_logproduct>
+                <class>Maickon_LogProduct_Model</class>
+            </maickon_logproduct>
+        </models>
+        <events>
+            <catalog_product_save_after>
+                <observers>
+                    <maickon_logproduct>
+                        <class>maickon_logproduct/observer</class>
+                        <method>logUpdate</method>
+                        <type>singleton</type>
+                    </maickon_logproduct>
+                </observers>
+            </catalog_product_save_after>
+        </events>
+    </global>
+</config>

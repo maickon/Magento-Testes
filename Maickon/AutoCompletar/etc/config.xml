@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <!-- Dentro de modules fica uma tag com a junçao do namespace + nome do modulo -->
+        <Maickon_AutoCompletar>
+            <version>0.0.1</version>
+        </Maickon_AutoCompletar>
+    </modules>
+    <!-- Define a URL a ser usada pelo modulo -->
+    <frontend>
+        <routers>
+            <autocompletar>
+                <use>standard</use>
+                <args>
+                    <module>Maickon_AutoCompletar</module>
+                    <!-- A URL referente ao modulo fica definida dentro da tag <frontName> -->
+                    <!-- Quando essa URL for acessada ela chamara o modulo do noh acima -->
+                    <frontName>autocompletar</frontName>
+                </args>
+            </autocompletar>
+        </routers>
+    </frontend>
+</config>
